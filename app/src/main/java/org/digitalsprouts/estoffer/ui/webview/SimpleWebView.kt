@@ -1,4 +1,4 @@
-package org.digitalsprouts.estoffer
+package org.digitalsprouts.estoffer.ui.webview
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import org.digitalsprouts.estoffer.R
 
 
 class SimpleWebView(val url: String) : Fragment() {

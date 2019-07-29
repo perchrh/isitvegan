@@ -1,4 +1,4 @@
-package org.digitalsprouts.estoffer
+package org.digitalsprouts.estoffer.ui.webview
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
