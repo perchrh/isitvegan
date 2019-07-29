@@ -13,11 +13,6 @@ import org.digitalsprouts.estoffer.R
 
 class SimpleWebView(val url: String) : Fragment() {
 
-    companion object {
-        // TODO check if this object is required
-        fun newInstance() = SimpleWebView("")
-    }
-
     private lateinit var viewModel: SimpleWebViewViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
