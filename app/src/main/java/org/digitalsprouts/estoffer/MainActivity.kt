@@ -1,5 +1,6 @@
 package org.digitalsprouts.estoffer
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -34,15 +35,22 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                // TODO show settings screen
+                val settingsLauncher = Intent(this, SettingsActivity::class.java)
+                startActivity(settingsLauncher)
                 true
             }
             R.id.action_about -> {
-                // TODO show about screen
+                val base_url = getString(R.string.about_base_url)
+                val locale = getString(R.string.language_code)
+                val url = "${base_url}_${locale}.html"
+                /// TODO start activity with webview fragment
                 true
             }
             R.id.action_sources -> {
-                // TODO show sources screen
+                val base_url = getString(R.string.sources_base_url)
+                val locale = getString(R.string.language_code)
+                val url = "${base_url}_${locale}.html"
+                /// TODO start activity with webview fragment
                 true
             }
             else -> super.onOptionsItemSelected(item)
