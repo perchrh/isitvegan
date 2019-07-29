@@ -1,9 +1,11 @@
 package org.digitalsprouts.estoffer.ui.main
 
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import org.digitalsprouts.estoffer.ENumbersApplication
 import org.digitalsprouts.estoffer.R
 
 private val TAB_TITLES = arrayOf(
@@ -20,6 +22,12 @@ private val TAB_TITLES = arrayOf(
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
+    val sharedPreferences =
+        context.getSharedPreferences(ENumbersApplication.SETTINGS, MODE_PRIVATE)
+
+    val enableNorwegianContent: Boolean =
+        sharedPreferences.getBoolean(ENumbersApplication.NORWEGIAN_CONTENT, false)
+
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
@@ -31,6 +39,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     override fun getCount(): Int {
-        return TAB_TITLES.size
+        return if (enableNorwegianContent) TAB_TITLES.size else TAB_TITLES.size - 2
     }
 }
