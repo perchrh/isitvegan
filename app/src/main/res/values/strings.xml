@@ -25,5 +25,5 @@
 
     <string name="vegan_wines_norway_url" tools:ignore="MissingTranslation">https://www.vegansamfunnet.no/vegansk-vin/print/#liste</string>
     <string name="vegan_beers_norway_url" tools:ignore="MissingTranslation">https://www.vegansamfunnet.no/vegansk-ol/print/#liste</string>
-    <string name="additives_base_url" tools:ignore="MissingTranslation">https://app.vegansamfunnet.no/other_additives_</string>
+    <string name="additives_base_url" tools:ignore="MissingTranslation">https://app.vegansamfunnet.no/other_additives</string>
 </resources>

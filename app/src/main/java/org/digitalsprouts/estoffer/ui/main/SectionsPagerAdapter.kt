@@ -7,12 +7,13 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import org.digitalsprouts.estoffer.ENumbersApplication
 import org.digitalsprouts.estoffer.R
+import org.digitalsprouts.estoffer.SimpleWebView
 
 private val TAB_TITLES = arrayOf(
-    R.string.tab_text_1,
-    R.string.tab_text_2,
-    R.string.tab_text_3,
-    R.string.tab_text_4
+    /* 0 */ R.string.tab_text_1,
+    /* 1 */ R.string.tab_text_2,
+    /* 2 */ R.string.tab_text_3,
+    /* 3 */ R.string.tab_text_4
 )
 
 /**
@@ -31,6 +32,26 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
+        when (position) {
+            0 -> {
+                // launch e-numbers fragment
+            }
+            1 -> {
+                val base_url = context.getString(R.string.additives_base_url)
+                val locale = context.getString(R.string.language_code)
+                val url = "${base_url}_${locale}.html"
+                return SimpleWebView(url)
+            }
+            2 -> {
+                return SimpleWebView(context.getString(R.string.vegan_beers_norway_url))
+            }
+            3 -> {
+                return SimpleWebView(context.getString(R.string.vegan_wines_norway_url))
+            }
+            else -> {
+                throw IllegalArgumentException("Impossible tab selected: $position")
+            }
+        }
         return PlaceholderFragment.newInstance(position + 1)
     }
 
