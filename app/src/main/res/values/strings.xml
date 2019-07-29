@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">Is it vegan</string>
+
+    <string name="tab_text_1">E-numbers</string>
+    <string name="tab_text_2">Additives</string>
+    <string name="tab_text_3">Beer</string>
+    <string name="tab_text_4">Wine</string>
 </resources>
