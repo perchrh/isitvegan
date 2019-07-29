@@ -1,8 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Is it vegan</string>
+    <string name="action_settings">Settings</string>
+    <string name="enable_norwegian_content">Enable content specific to Norway</string>
+
+    <string name="action_about">About</string>
+    <string name="action_sources">Sources</string>
+
+    <string name="app_name">Is it Vegan?</string>
 
     <string name="tab_text_1">E-numbers</string>
     <string name="tab_text_2">Additives</string>
     <string name="tab_text_3">Beer</string>
     <string name="tab_text_4">Wine</string>
+
+    <string name="enumber_headline">These E-numbers have or may have animal origins:</string>
+
+    <string name="details_on">Hide details</string>
+    <string name="details_off">Show details</string>
+    <string name="not_vegan_label">not vegan</string>
+    <string name="likely_not_vegan_label">likely not vegan</string>
+    <string name="maybe_not_vegan_label">maybe not vegan</string>
+    <string name="likely_vegan_label">likely vegan</string>
+    <string name="highly_likely_vegan_label">highly likely vegan</string>
+
+    <string name="vegan_wines_norway_url" tools:ignore="MissingTranslation">https://www.vegansamfunnet.no/vegansk-vin/print/#liste</string>
+    <string name="vegan_beers_norway_url" tools:ignore="MissingTranslation">https://www.vegansamfunnet.no/vegansk-ol/print/#liste</string>
+    <string name="additives_base_url" tools:ignore="MissingTranslation">https://app.vegansamfunnet.no/other_additives_</string>
 </resources>

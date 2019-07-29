@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Innstillinger</string>
+    <string name="action_about">Om appen</string>
+    <string name="action_sources">Kilder</string>
+    <string name="enable_norwegian_content">Inkluder øl og vin i Norge</string>
+
+    <string name="app_name">Er det vegansk?</string>
+    <string name="tab_text_1">E-stoffer</string>
+    <string name="tab_text_2">Andre stoffer</string>
+    <string name="tab_text_3">Øl</string>
+    <string name="tab_text_4">Vin</string>
+
+    <string name="enumber_headline">Disse E-stoffene kan ha animalsk opprinnelse:</string>
+
+    <string name="details_on">Skjul detaljer</string>
+    <string name="details_off">Vis detaljer</string>
+
+    <string name="not_vegan_label">animalsk opprinnelse</string>
+    <string name="likely_not_vegan_label">sannsynligvis animalsk opprinnelse</string>
+    <string name="maybe_not_vegan_label">kanskje animalsk opprinnelse</string>
+    <string name="likely_vegan_label">sannsynligvis ikke animalsk opprinnelse</string>
+    <string name="highly_likely_vegan_label">mest sannsynlig ikke animalsk opprinnelse</string>
+
+</resources>
