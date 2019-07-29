@@ -60,8 +60,10 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         return data
     }
 
-    private fun createSimpleWebViewFragment(@StringRes resourceInt: Int) =
-        SimpleWebViewFragment(Uri.parse(context.getString(resourceInt)))
+    private fun createSimpleWebViewFragment(@StringRes resourceInt: Int): SimpleWebViewFragment {
+        val data = Uri.parse(context.getString(resourceInt))
+        return SimpleWebViewFragment(data)
+    }
 
     override fun getPageTitle(position: Int): CharSequence? {
         return context.resources.getString(TAB_TITLES[position])
