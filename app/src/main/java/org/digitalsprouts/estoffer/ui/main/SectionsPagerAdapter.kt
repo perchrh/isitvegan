@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import org.digitalsprouts.estoffer.ENumbersApplication
 import org.digitalsprouts.estoffer.R
-import org.digitalsprouts.estoffer.ui.webview.SimpleWebView
+import org.digitalsprouts.estoffer.ui.webview.SimpleWebViewFragment
 
 private val TAB_TITLES = arrayOf(
     /* 0 */ R.string.tab_text_1,
@@ -38,13 +38,13 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
                 val base_url = context.getString(R.string.additives_base_url)
                 val locale = context.getString(R.string.language_code)
                 val url = "${base_url}_${locale}.html"
-                return SimpleWebView(url)
+                return SimpleWebViewFragment(url)
             }
             2 -> {
-                return SimpleWebView(context.getString(R.string.vegan_beers_norway_url))
+                return SimpleWebViewFragment(context.getString(R.string.vegan_beers_norway_url))
             }
             3 -> {
-                return SimpleWebView(context.getString(R.string.vegan_wines_norway_url))
+                return SimpleWebViewFragment(context.getString(R.string.vegan_wines_norway_url))
             }
             else -> {
                 throw IllegalArgumentException("Impossible tab selected: $position")

@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import org.digitalsprouts.estoffer.R
 
 
-class SimpleWebView(val url: String) : Fragment() {
+class SimpleWebViewFragment(val url: String) : Fragment() {
 
     private lateinit var viewModel: SimpleWebViewViewModel
 

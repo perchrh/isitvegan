@@ -16,7 +16,7 @@ class SimpleWebViewActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(
                 R.id.simple_web_view,
-                SimpleWebView(url)
+                SimpleWebViewFragment(url)
             )
             .commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
