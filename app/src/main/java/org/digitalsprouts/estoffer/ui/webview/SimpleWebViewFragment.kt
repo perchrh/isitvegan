@@ -1,5 +1,6 @@
 package org.digitalsprouts.estoffer.ui.webview
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,7 @@ import androidx.lifecycle.ViewModelProviders
 import org.digitalsprouts.estoffer.R
 
 
-class SimpleWebViewFragment(val url: String) : Fragment() {
+class SimpleWebViewFragment(val data: Uri) : Fragment() {
 
     private lateinit var viewModel: SimpleWebViewViewModel
 
@@ -30,8 +31,8 @@ class SimpleWebViewFragment(val url: String) : Fragment() {
         webView.settings.setAppCachePath(context!!.getFilesDir().getAbsolutePath() + "/cache");
         webView.settings.setAppCacheEnabled(true)
 
-        viewModel.webpage.observe(this, Observer<String> {
-            webView.loadUrl(it)
+        viewModel.webpage.observe(this, Observer<Uri> {
+            webView.loadUrl(it.toString())
         })
 
         return root
@@ -40,8 +41,7 @@ class SimpleWebViewFragment(val url: String) : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        // TODO: Use the ViewModel
-        viewModel.setWebpage(url)
+        viewModel.setWebpage(data)
     }
 
 }

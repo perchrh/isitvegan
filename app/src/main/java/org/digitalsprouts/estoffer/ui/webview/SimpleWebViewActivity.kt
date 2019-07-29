@@ -1,5 +1,6 @@
 package org.digitalsprouts.estoffer.ui.webview
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.digitalsprouts.estoffer.R
@@ -10,7 +11,7 @@ class SimpleWebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_simple_web_view)
 
-        val url: String = intent.data!!.toString()
+        val url: Uri = intent.data!!
 
         supportFragmentManager
             .beginTransaction()
