@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import org.digitalsprouts.estoffer.ENumbersApplication
+import org.digitalsprouts.estoffer.ui.enumbers.EnumberFragment
 import org.digitalsprouts.estoffer.R
-import org.digitalsprouts.estoffer.ui.enumbers.EnumbersFragment
 import org.digitalsprouts.estoffer.ui.webview.SimpleWebViewFragment
 
 private val TAB_TITLES = arrayOf(
@@ -34,7 +34,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
         // getItem is called to instantiate the fragment for the given page.
         when (position) {
             0 -> {
-                return EnumbersFragment()
+                return EnumberFragment()
             }
             1 -> {
                 val data = createOtherAdditivesUrl()
@@ -53,6 +53,7 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     }
 
     private fun createOtherAdditivesUrl(): Uri {
+        // TODO sentralize common method
         val base_url = context.getString(R.string.additives_base_url)
         val locale = context.getString(R.string.language_code)
         val url = "${base_url}_${locale}.html"
