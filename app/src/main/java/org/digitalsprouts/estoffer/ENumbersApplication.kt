@@ -23,8 +23,6 @@ class ENumbersApplication : Application() {
     }
 
     companion object {
-
-        val SETTINGS = "settings"
         val NORWEGIAN_CONTENT = "norwegian_content"
     }
 }

@@ -43,24 +43,24 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_about -> {
-                val base_url = getString(R.string.about_base_url)
-                val locale = getString(R.string.language_code)
-                val url = "${base_url}_${locale}.html"
-                val launcher = Intent(this, SimpleWebViewActivity::class.java)
-                launcher.setData(Uri.parse(url))
+                val launcher = createWebviewIntent(getString(R.string.about_base_url))
                 startActivity(launcher)
                 true
             }
             R.id.action_sources -> {
-                val base_url = getString(R.string.sources_base_url)
-                val locale = getString(R.string.language_code)
-                val url = "${base_url}_${locale}.html"
-                val launcher = Intent(this, SimpleWebViewActivity::class.java)
-                launcher.setData(Uri.parse(url))
+                val launcher = createWebviewIntent(getString(R.string.sources_base_url))
                 startActivity(launcher)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun createWebviewIntent(base_url:String): Intent {
+        val locale = getString(R.string.language_code)
+        val url = "${base_url}_${locale}.html"
+        val launcher = Intent(this, SimpleWebViewActivity::class.java)
+        launcher.setData(Uri.parse(url))
+        return launcher
     }
 }
