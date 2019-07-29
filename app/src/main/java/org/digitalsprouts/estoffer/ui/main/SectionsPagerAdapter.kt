@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import org.digitalsprouts.estoffer.ENumbersApplication
 import org.digitalsprouts.estoffer.R
+import org.digitalsprouts.estoffer.ui.enumbers.EnumbersFragment
 import org.digitalsprouts.estoffer.ui.webview.SimpleWebViewFragment
 
 private val TAB_TITLES = arrayOf(
@@ -31,16 +32,13 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
 
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
         when (position) {
             0 -> {
-                // launch e-numbers fragment
+                return EnumbersFragment()
             }
             1 -> {
-                val base_url = context.getString(R.string.additives_base_url)
-                val locale = context.getString(R.string.language_code)
-                val url = "${base_url}_${locale}.html"
-                return SimpleWebViewFragment(Uri.parse(url))
+                val data = createOtherAdditivesUrl()
+                return SimpleWebViewFragment(data)
             }
             2 -> {
                 return createSimpleWebViewFragment(R.string.vegan_beers_norway_url)
@@ -52,7 +50,14 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
                 throw IllegalArgumentException("Impossible tab selected: $position")
             }
         }
-        return PlaceholderFragment.newInstance(position + 1)
+    }
+
+    private fun createOtherAdditivesUrl(): Uri {
+        val base_url = context.getString(R.string.additives_base_url)
+        val locale = context.getString(R.string.language_code)
+        val url = "${base_url}_${locale}.html"
+        val data = Uri.parse(url)
+        return data
     }
 
     private fun createSimpleWebViewFragment(@StringRes resourceInt: Int) =
