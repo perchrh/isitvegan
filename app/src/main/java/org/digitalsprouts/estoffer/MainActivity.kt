@@ -10,6 +10,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import org.digitalsprouts.estoffer.ui.main.SectionsPagerAdapter
+import org.digitalsprouts.estoffer.ui.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
 

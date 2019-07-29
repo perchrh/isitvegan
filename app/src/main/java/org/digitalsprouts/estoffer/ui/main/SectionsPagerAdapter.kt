@@ -1,13 +1,13 @@
 package org.digitalsprouts.estoffer.ui.main
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
+import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import org.digitalsprouts.estoffer.ENumbersApplication
 import org.digitalsprouts.estoffer.R
-import org.digitalsprouts.estoffer.SimpleWebView
+import org.digitalsprouts.estoffer.ui.webview.SimpleWebView
 
 private val TAB_TITLES = arrayOf(
     /* 0 */ R.string.tab_text_1,
@@ -23,11 +23,9 @@ private val TAB_TITLES = arrayOf(
 class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
-    val sharedPreferences =
-        context.getSharedPreferences(ENumbersApplication.SETTINGS, MODE_PRIVATE)
-
+    val preferences = PreferenceManager.getDefaultSharedPreferences(context);
     val enableNorwegianContent: Boolean =
-        sharedPreferences.getBoolean(ENumbersApplication.NORWEGIAN_CONTENT, false)
+        preferences.getBoolean(ENumbersApplication.NORWEGIAN_CONTENT, false)
 
     override fun getItem(position: Int): Fragment {
         // getItem is called to instantiate the fragment for the given page.
