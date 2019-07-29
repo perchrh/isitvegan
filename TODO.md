@@ -5,3 +5,7 @@ and http://www.food-info.net/uk/qa/qa-fi45.htm
 and filter the list against which e-numbers are permitted in the EU:
 https://webgate.ec.europa.eu/foods_system/main/?sector=FAD&auth=SANCAS
 Then, update sources and timestamps accordingly
+
+Replace Gridview with RecyclerView
+
+Replace Button with floating button in E-numbers fragment
