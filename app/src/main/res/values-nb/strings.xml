@@ -16,10 +16,10 @@
     <string name="details_on">Skjul detaljer</string>
     <string name="details_off">Vis detaljer</string>
 
-    <string name="not_vegan_label">animalsk opprinnelse</string>
-    <string name="likely_not_vegan_label">sannsynligvis animalsk opprinnelse</string>
-    <string name="maybe_not_vegan_label">kanskje animalsk opprinnelse</string>
-    <string name="likely_vegan_label">sannsynligvis ikke animalsk opprinnelse</string>
-    <string name="highly_likely_vegan_label">mest sannsynlig ikke animalsk opprinnelse</string>
+    <string name="not_vegan_label">alltid animalsk</string>
+    <string name="likely_not_vegan_label">sannsynligvis</string>
+    <string name="maybe_not_vegan_label">kanskje</string>
+    <string name="likely_vegan_label">sannsynligvis ikke</string>
+    <string name="highly_likely_vegan_label">mest sannsynlig ikke</string>
 
 </resources>

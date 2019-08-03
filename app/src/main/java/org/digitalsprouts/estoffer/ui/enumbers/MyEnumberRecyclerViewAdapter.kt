@@ -9,11 +9,6 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_enumber.view.*
 import org.digitalsprouts.estoffer.R
 
-/**
- * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
- * specified [OnListFragmentInteractionListener].
- * TODO: Replace the implementation with code for your data type.
- */
 class MyEnumberRecyclerViewAdapter(
     private val mValues: List<String>
 ) : RecyclerView.Adapter<MyEnumberRecyclerViewAdapter.ViewHolder>() {
