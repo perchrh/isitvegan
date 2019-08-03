@@ -1,4 +1,4 @@
-package org.digitalsprouts.estoffer
+package org.digitalsprouts.estoffer.ui.main
 
 import android.content.Intent
 import android.net.Uri
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import org.digitalsprouts.estoffer.ui.main.SectionsPagerAdapter
+import org.digitalsprouts.estoffer.R
 import org.digitalsprouts.estoffer.ui.settings.SettingsActivity
 import org.digitalsprouts.estoffer.ui.webview.SimpleWebViewActivity
 
