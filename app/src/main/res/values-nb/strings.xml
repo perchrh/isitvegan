@@ -13,9 +13,6 @@
 
     <string name="enumber_headline">Disse E-stoffene kan ha animalsk opprinnelse:</string>
 
-    <string name="details_on">Skjul detaljer</string>
-    <string name="details_off">Vis detaljer</string>
-
     <string name="not_vegan_label">alltid animalsk</string>
     <string name="likely_not_vegan_label">sannsynligvis</string>
     <string name="maybe_not_vegan_label">kanskje</string>

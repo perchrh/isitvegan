@@ -13,9 +13,6 @@
 
     <string name="enumber_headline">Diese E-Nummern sind sicher oder vielleicht tierischen Ursprungs:</string>
 
-    <string name="details_on">Details ausblenden</string>
-    <string name="details_off">Details anzeigen</string>
-
     <string name="not_vegan_label">sicher tierischen Ursprungs</string>
     <string name="likely_not_vegan_label">wahrscheinlich tierischen Ursprungs</string>
     <string name="maybe_not_vegan_label">villeiecht tierischen Ursprungs</string>

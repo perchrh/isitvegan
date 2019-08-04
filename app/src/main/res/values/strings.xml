@@ -15,8 +15,6 @@
 
     <string name="enumber_headline">These E-numbers have or may have animal origins:</string>
 
-    <string name="details_on">Hide details</string>
-    <string name="details_off">Show details</string>
     <string name="not_vegan_label">not vegan</string>
     <string name="likely_not_vegan_label">likely not vegan</string>
     <string name="maybe_not_vegan_label">maybe not vegan</string>
@@ -30,6 +28,5 @@
     <string name="sources_base_url" tools:ignore="MissingTranslation">https://app.vegansamfunnet.no/sources</string>
 
     <string name="title_activity_settings" tools:ignore="MissingTranslation">Settings</string>
-    <string name="title_activity_settings_category" tools:ignore="MissingTranslation">Localization</string>
 
 </resources>

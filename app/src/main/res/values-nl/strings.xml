@@ -13,9 +13,6 @@
 
     <string name="enumber_headline">Deze E-nummers zijn of zijn waarschijnlijk afkomstig van dieren:</string>
 
-    <string name="details_on">Verberg details</string>
-    <string name="details_off">Toon details</string>
-
     <string name="not_vegan_label">niet veganistisch</string>
     <string name="likely_not_vegan_label">waarschijnlijk niet veganistisch</string>
     <string name="maybe_not_vegan_label">misschien niet veganistisch</string>
