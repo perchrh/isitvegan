@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - chmod +x ./gradlew
+      - ./gradlew assembleDebug
+  install:
+    runtime-versions:
+      java: openjdk8
+      android: 28
+
+artifacts:
+  files:
+     - './android/app/build/outputs/**/*.apk'
+  discard-paths: yes
